@@ -1,13 +1,24 @@
-import { useQuery, useMutation, QueryClient } from "react-query";
+import { useQuery, useMutation, QueryClient, UseQueryOptions } from "react-query";
 import axiosInstance from ".";
 import { toast } from "react-toastify";
 
-export const useQueryWrapper = (key: string, url: string, options?: any) => {
-  const getAPICall = async () => {
-    const { data } = await axiosInstance.get(url);
+// export const useQueryWrapper = (key: string, url: string, options?: any) => {
+//   const getAPICall = async () => {
+//     const { data } = await axiosInstance.get(url);
+//     return data;
+//   };
+//   return useQuery(key, getAPICall, options);
+// };
+export const useQueryWrapper = <TData = unknown, TError = unknown>(
+  key: string,
+  url: string,
+  options?: UseQueryOptions<TData, TError>,
+) => {
+  const getAPICall = async (): Promise<TData> => {
+    const { data } = await axiosInstance.get<TData>(url);
     return data;
   };
-  return useQuery(key, getAPICall, options);
+  return useQuery<TData, TError>(key, getAPICall, options);
 };
 
 export const postRequest = async ({ url, data }: any) => {
