@@ -2,15 +2,8 @@ import { useQuery, useMutation, QueryClient, UseQueryOptions } from "react-query
 import axiosInstance from ".";
 import { toast } from "react-toastify";
 
-// export const useQueryWrapper = (key: string, url: string, options?: any) => {
-//   const getAPICall = async () => {
-//     const { data } = await axiosInstance.get(url);
-//     return data;
-//   };
-//   return useQuery(key, getAPICall, options);
-// };
 export const useQueryWrapper = <TData = unknown, TError = unknown>(
-  key: string,
+  key: string | any,
   url: string,
   options?: UseQueryOptions<TData, TError>,
 ) => {
@@ -41,7 +34,6 @@ export const deleteRequest = async ({ url, data }: any) => {
   return response?.data || response;
 };
 
-// TODO: write JSDocs for this function
 export const useMutationWrapper = (makeAPICall: any, onSuccess?: any, onError?: any): any => {
   return useMutation(makeAPICall, {
     onSuccess: (res) => {

@@ -1,2 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+/* Pagination styles start */
+.pagination {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination li a {
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.pagination li a:hover {
+  background-color: #eee;
+}
+
+.pagination li.active a {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination li.disabled a {
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Pagination styles ends */

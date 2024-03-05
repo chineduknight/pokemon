@@ -19,13 +19,6 @@ const onRequest = (request: AxiosRequestConfig): any => {
   return request;
 };
 
-// const onRequest = (request: AxiosRequestConfig): any => {
-//   const headers: any = request.headers || {};
-//   headers.Authorization = localStorage.getItem("key-here") || "";
-//   request.headers = headers;
-//   return request;
-// };
-
 const onRequestError = (error: AxiosError): Promise<AxiosError> => {
   return Promise.reject(error);
 };
