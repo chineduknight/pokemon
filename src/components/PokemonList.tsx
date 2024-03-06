@@ -17,7 +17,7 @@ type PokemonListProps = {
 const PokemonList = ({ category, searchTerm, onClick }: PokemonListProps) => {
   const { data, isLoading, isError } = usePokemonData(category);
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 9;
+  const itemsPerPage = 25;
 
   useEffect(() => {
     // Reset currentPage to 0 whenever searchTerm changes

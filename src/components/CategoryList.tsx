@@ -14,7 +14,7 @@ const CategoryList = ({ onSelectCategory }: any) => {
   if (isError) return <ErrorDisplay message={error.message} />;
 
   return (
-    <Flex width="970px" flexWrap="wrap" alignItems="center" justifyContent="center">
+    <Flex maxWidth="970px" flexWrap="wrap" alignItems="center" justifyContent="center">
       {data.results.map((item, index) => (
         <CategoryItem
           key={item.name}
