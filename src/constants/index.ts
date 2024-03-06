@@ -78,7 +78,7 @@ export const colors = [
 ];
 
 export const bannerURL =
-  "https://fontmeme.com/permalink/211122/1a54d4d9a724da8b765b2299e0643073.png";
+  "https://res.cloudinary.com/chineduknight/image/upload/c_scale,w_678/v1709718168/Knight-Pokemon-06-03-2024_moqaws.png";
 
 export const noResultURL =
   "https://res.cloudinary.com/chineduknight/image/upload/v1709676416/DALL_E_2024-03-05_23.06.24_-_Create_an_illustration_of_a_whimsical_friendly_Pokemon-like_creature_sitting_on_a_rock_looking_confused_and_surrounded_by_question_marks_in_a_peace_rpella.webp";

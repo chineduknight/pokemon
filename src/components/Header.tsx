@@ -21,8 +21,8 @@ const Header: React.FC<BannerProps> = ({ onSearch }) => {
 
   return (
     <Box textAlign="center" mb="50px">
-      <Image mt="40px" src={bannerURL} />
-      <Box mt="20px">
+      <Image src={bannerURL} />
+      <Box>
         <Input
           w="300px"
           textAlign="center"
