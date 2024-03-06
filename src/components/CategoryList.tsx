@@ -1,4 +1,3 @@
-// components/CategoryList.jsx
 import { Flex } from "@chakra-ui/react";
 import { colors } from "constants/index";
 import { useQueryWrapper } from "services/api/apiHelper";
@@ -6,7 +5,11 @@ import CategoryItem from "./CategoryItem";
 import { SkeletonCategories, ErrorDisplay } from "./Loader";
 import { useState } from "react";
 
-const CategoryList = ({ onSelectCategory }: any) => {
+type CategoryListProps = {
+  onSelectCategory: (item) => void;
+};
+
+const CategoryList = ({ onSelectCategory }: CategoryListProps) => {
   const { data, isLoading, isError, error }: any = useQueryWrapper("get-category", "/type");
   const [catName, setCatName] = useState("normal");
 

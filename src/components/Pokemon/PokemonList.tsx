@@ -1,12 +1,12 @@
 import React, { useMemo, useEffect, useState } from "react";
 import PokemonCard from "./PokemonCard";
-import usePokemonData from "../hooks/usePokemonData";
+import usePokemonData from "../../hooks/usePokemonData";
 import { Flex, Box } from "@chakra-ui/react";
-import { ErrorDisplay, NoResultsFound } from "./Loader";
+import { ErrorDisplay, NoResultsFound } from "../Loader";
 import { hashStringToIndex } from "utils/helper";
 import { pokemonImages } from "constants/index";
-import Pagination from "./Pokemon/Pagination";
-import SkeletonPokemons from "./Pokemon/SkelentonPokemons";
+import Pagination from "./Pagination";
+import SkeletonPokemons from "./SkelentonPokemons";
 
 type PokemonListProps = {
   category: string;

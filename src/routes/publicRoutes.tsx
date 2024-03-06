@@ -3,13 +3,16 @@ import WithSuspense from "components/HOC/WithSuspense";
 import { PUBLIC_PATHS, PROTECTED_PATHS } from "./pagePath";
 import { lazy } from "react";
 
-const Login = WithSuspense(lazy(() => import("pages/Home")));
+const Home = WithSuspense(
+  lazy(() => import("pages/Home")),
+  true,
+);
 
-const { LOGIN } = PUBLIC_PATHS;
+const { HOME } = PUBLIC_PATHS;
 
 const PUBLIC_ROUTES = [
-  { path: LOGIN, element: <Login /> },
-  { path: "/", element: <Login /> },
+  { path: HOME, element: <Home /> },
+  { path: "/", element: <Home /> },
   // this enables you not to access the public routes when logged in
   ...Object.values(PROTECTED_PATHS).map((route) => {
     return {

@@ -1,5 +1,5 @@
 export const PUBLIC_PATHS = {
-  LOGIN: "/login",
+  HOME: "/home",
 };
 
 export const PROTECTED_PATHS = {

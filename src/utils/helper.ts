@@ -1,10 +1,13 @@
+// Convert a string into an array index based on its characters
 export const hashStringToIndex = (str, arrayLength) => {
   let hash = 0;
+
+  // Loop through each character in the string
   for (let i = 0; i < str.length; i++) {
-    const char = str.charCodeAt(i);
-    hash = (hash + char) % arrayLength;
+    const char = str.charCodeAt(i); // Convert the current character to its ASCII value
+    hash = (hash + char) % arrayLength; // Add the ASCII value to the hash and use modulo to ensure it's within array bounds
   }
-  return hash;
+  return hash; // Return the final hash value, which is the index in the array
 };
 
 export const extractNumberFromUrl = (url: string) => {

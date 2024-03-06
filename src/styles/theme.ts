@@ -6,6 +6,13 @@ import { ButtonStyles as Button } from "./components/buttonStyles";
 // https://www.easyreact.com/articles/chakra-ui-customisations
 
 const myTheme = extendTheme({
+  styles: {
+    global: {
+      "html, body": {
+        backgroundColor: "#E0F2F1", // Soft Blue
+      },
+    },
+  },
   fonts: {
     heading: "Ubuntu",
     body: "Ubuntu",

@@ -1,8 +1,8 @@
 import { Flex, useDisclosure } from "@chakra-ui/react";
-import PokemonStatsModal from "components/PokeStats";
+import PokemonStatsModal from "components/Pokemon/PokeStats";
 import { useState } from "react";
 import CategoryList from "components/CategoryList";
-import PokemonList from "components/PokemonList";
+import PokemonList from "components/Pokemon/PokemonList";
 import Header from "components/Header";
 
 const Home = () => {
@@ -34,7 +34,14 @@ const Home = () => {
     onOpen();
   };
   return (
-    <Flex mb="50px" flexDir="column" justifyContent="center" alignItems="center">
+    <Flex
+      mb="50px"
+      // bg="#DCEDC8"
+      // minH="100vh"
+      flexDir="column"
+      justifyContent="center"
+      alignItems="center"
+    >
       <PokemonStatsModal isOpen={isOpen} onClose={onClose} pokemon={selectedPokemon} />
       <Header onSearch={handleSearchChange} />
       <CategoryList onSelectCategory={handleClick} />
